@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circular Button Ring</title>
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 50px auto;
+      border: 2px solid #000;
+      border-radius: 50%;
+    }
+
+    .center-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: #e74c3c;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Button positions calculated using sine and cosine for equal spacing */
+    .btn:nth-child(2) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg) translate(125px) rotate(0deg);
+    }
+
+    .btn:nth-child(3) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg) translate(125px) rotate(-90deg);
+    }
+
+    .btn:nth-child(4) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg) translate(125px) rotate(-180deg);
+    }
+
+    .btn:nth-child(5) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(270deg) translate(125px) rotate(-270deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button class="center-btn">C</button>
+    <button class="btn">1</button>
+    <button class="btn">2</button>
+    <button class="btn">3</button>
+    <button class="btn">4</button>
+  </div>
+
+</body>
+</html>
