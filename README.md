@@ -2,6 +2,8 @@
 
 **RoboControl** is a React Native mobile app designed to control a robot powered by an ESP32 microcontroller. The app features an intuitive gamepad-style interface, allowing users to remotely steer the robot in multiple directions, such as forward, backward, left, and right.
 
+ ![App Screenshot](public/image.png) 
+
 ## Features
 
 - **Gamepad Layout**: A simple and intuitive '+' style control layout for easy robot navigation.
