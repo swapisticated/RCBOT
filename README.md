@@ -36,14 +36,14 @@ Steps
 
     bash
 
-git clone https://github.com/your-username/RCBOT.git
-cd RCBOT
+    git clone https://github.com/your-username/RCBOT.git
+    cd RCBOT
 
 Install dependencies:
 
 bash
 
-npm install
+    npm install
 
 Start the app:
 
