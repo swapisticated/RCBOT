@@ -14,6 +14,7 @@ const ControlScreen = () => {
     const [colorIndex, setColorIndex] = useState(0); // State for current color index
     const [leftServo, setLeftServo] = useState(90); // Default value for left servo
     const [rightServo, setRightServo] = useState(90); // Default value for right servo
+    const [headServo, setHeadServo] = useState(90); // New state for head servo
 
     // Array of predefined color hex codes
     const colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF'];
@@ -80,6 +81,10 @@ const ControlScreen = () => {
     const handleRightServoChange = (value) => {
         setRightServo(value);
         sendCommand(`right_servo=${value}`); // Send command for right servo
+    };
+    const handleHeadServoChange = (value) => {
+        setHeadServo(value);
+        sendCommand(`head_servo=${value}`); // Send command for head servo
     };
 
 
@@ -231,7 +236,7 @@ const ControlScreen = () => {
             <View className='bg-gray-700 absolute w-full h-12 bottom-0 justify-center items-center rounded-b-3xl'>
                 <View className='bg-transparent border-b-[20px] absolute top-[-100] left-50 w-40 border-l-[40px] h-[100px] border-r-[40px] border-b-gray-700 border-r-transparent border-l-transparent' />
             </View>
-            <View className="absolute w-full h-full flex-row justify-around items-center">
+            <View className="absolute w-full h-full flex-row justify-around items-center " style={{ opacity: isPowerOn ? 1 : 0.5 }} >
                 {/* Left Servo Slider */}
                 <View className="h-1/2 w-10  ml-4 rounded-lg backdrop-blur-md top-50 left-0 bg-zinc-400 opacity-50 absolute items-center justify-center">
                     {/* <Text className="text-white text-center mb-2">Left Servo: {leftServo}°</Text> */}
@@ -261,6 +266,20 @@ const ControlScreen = () => {
                         maximumTrackTintColor="#000000"
                     />
                 </View>
+
+
+            </View>
+            <View className=" h-8 w-1/4 mr-4 rounded-lg backdrop-blur-md bottom-1 inset-x-1/2 bg-zinc-400 opacity-50 absolute items-center justify-center">
+                <Slider
+                    style={{ width: 200, height: 40, transform: [{ rotate: '0deg' }] }}
+                    minimumValue={0}
+                    maximumValue={180}
+                    step={1}
+                    value={headServo}
+                    onValueChange={handleHeadServoChange}
+                    minimumTrackTintColor="#FFFFFF"
+                    maximumTrackTintColor="#000000"
+                />
             </View>
 
         </SafeAreaView>
