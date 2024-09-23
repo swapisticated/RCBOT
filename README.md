@@ -53,16 +53,12 @@ Start the app:
 
 npx react-native run-android
 
-For Expo:
 
-bash
 
-        expo start
-
-    ESP32 Setup:
-        Ensure the ESP32 is running MicroPython and is configured to accept commands via Bluetooth or Wi-Fi.
-        Flash your ESP32 with the correct firmware for robot control.
-        Modify the ESP32 script to communicate with the app.
+ESP32 Setup:
+    Ensure the ESP32 is running MicroPython and is configured to accept commands via Bluetooth or Wi-Fi.
+    Flash your ESP32 with the correct firmware for robot control.
+    Modify the ESP32 script to communicate with the app.
 
 Usage
 
