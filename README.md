@@ -36,8 +36,8 @@ Steps
 
     bash
 
-git clone https://github.com/your-username/robo-control.git
-cd robo-control
+git clone https://github.com/your-username/RCBOT.git
+cd RCBOT
 
 Install dependencies:
 
