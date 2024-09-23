@@ -85,7 +85,13 @@ android {
         versionCode 1
         versionName "1.0"
     }
-    signingConfigs {
+signingConfigs {
+        release {
+            storeFile file('release-key.keystore') // Path to your keystore
+            storePassword '7303569' // Your keystore password
+            keyAlias 'my-key-alias' // Your key alias
+            keyPassword '7303569' // Your key password
+        }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
